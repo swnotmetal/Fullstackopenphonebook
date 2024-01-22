@@ -6,7 +6,7 @@ const cors =require('cors')
 app.use(morgan('tiny'))
 app.use(express.json())
 app.use(cors())
-
+app.use(express.static('dist'))
 
 morgan.token('person', (req, res) => {
   const body = req.body;
